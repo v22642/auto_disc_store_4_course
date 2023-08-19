@@ -1,0 +1,217 @@
+@media only screen and (max-width: 375px){
+  body{
+    width: 375px;
+  }
+      *, *::before, *::after { 
+          padding: 0;
+          margin: 0;
+          border: none;
+          box-sizing: border-box;
+      }
+      /* скрываем чекбокс */
+  #menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: relative;
+    right: 10px;
+    width: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  /* контейнер меню */
+  .menu__box {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      list-style: none;
+      text-align: center;
+      background-color: black;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    /* элементы меню */
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: white;
+      
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .menu__item:hover {
+      background-color: #CFD8DC;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      visibility: visible;
+      left: 0;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      transition-duration: .25s;
+    }
+    .menu__box {
+      transition-duration: .25s;
+    }
+    .menu__item {
+      transition-duration: .25s;
+    }
+  
+    .header_text1{
+      font-weight: bold;
+      text-align: center;
+      font-size: 24px;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+    .header_text2{
+      line-height: 1.8;
+      padding-top: 111px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .header {
+      padding-top: 58px;
+      text-align: center;
+    }   
+    .header_menu{
+      padding-top: 44px;
+    }
+
+    .main{
+      background-color: lightgray;
+      display: grid;
+      padding: 0px;
+      gap: 50px;
+      grid-template-columns: 375px;
+      grid-template-rows: 539px 674px 400px;
+    }
+    .profile{
+      margin-top: 20px;
+      background-color: white;
+    }
+    .profile img{
+      width: 305px;
+      height: 375px;
+      padding-top: 20px;
+    }
+    .button-profile{
+      margin-top: 30px;
+      width: 296px;
+      height: 73px;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      background-color: #FFB800;
+      font-size: 20px;
+    }
+    .profile-info{
+      padding: 50px;
+      background-color: white;
+    }
+    .profile-text{
+      width: 310px;
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .profile-text-short{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 200px;
+      display: flex;
+    }
+    .profile-text-long{
+      margin-bottom: 20px;
+      width: 300px;
+      display: flex;
+    }
+    .profile-text-very-long{
+      display: flex;
+    }
+    .profile-info-1{
+      
+    }
+    .profile-info-2{
+      margin: auto;
+    }
+    .contacts{
+      padding: 15px;
+      margin: auto;
+      background-color: white;
+      width: 324px;
+      margin-bottom: 30px;
+    }
+    .user{
+      width: 250px;
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .user img{
+      margin-right: 20px;
+    }
+    .user-text{
+      margin-top: 7px;
+      text-align: left;
+      
+    }
+    .media{
+      padding: 15px;
+      margin: auto;
+      background-color: white;
+      width: 324px;
+      margin-bottom: 30px;
+    }
+    .media img{
+      margin-right: 20px;
+    }
+    .media-text{
+      margin-top: 7px;
+      text-align: left;
+    }
+    .group{
+      width: 250px;
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+}
